@@ -34,7 +34,7 @@ const acceso = document.getElementById('botonInicio').addEventListener('click', 
 
 //codigos para botones de inicio de sesion y registrate
 document.getElementById('botonRegistrate').addEventListener('click', function() {
-    window.location.href = '../Pages/registrarse.html';
+    window.location.href = '../pages/registrarse.html';
 });
 
 
