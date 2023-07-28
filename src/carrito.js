@@ -54,7 +54,7 @@ function insertarDatosTabla(datos){
     console.log(monto);
     emptyMessage.innerHTML= `<p id="monto" ">Monto del pedido: $${monto}</p>
     <p id="botonVaciar"><a class="btn btn-dark botonAgregar" onclick="clearCart();" id="Vaciar" role="button">Vaciar carrito</a></p>
-    <p id="botonCheckout"><a  href="/Pages/checkout.html" class="btn btn-dark"  id="irCheckout" role="button">Finalizar compra</a></p>`;
+    <p id="botonCheckout"><a  href="/pages/checkout.html" class="btn btn-dark"  id="irCheckout" role="button">Finalizar compra</a></p>`;
 }
 
 //función flecha para agregar fila a la tabla cada que se presione el botón:
