@@ -11,13 +11,13 @@ async function obtenerDatosUsuario() {
   try {
     const response = await fetch("https://ojosdgato-api.up.railway.app/ojosdgato/users/12");
     if (!response.ok) {
-      throw new Error("Error al obtener los datos del usuario.");
+      throw new Error("Error en la solicitud al servidor: " + response.status + " " + response.statusText);
     }
     const data = await response.json();
     mostrarDatos(data);
   } catch (error) {
     console.error(error);
-    window.alert("Error al obtener los datos del usuario.");
+    window.alert("Error al obtener los datos del usuario. Verifique la consola para más detalles.");
   }
 }
 
