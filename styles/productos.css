@@ -11,6 +11,11 @@ body {
    background-attachment: fixed; Fija el fondo en su posición 
   background-position: center; */
 }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 #encabezado {
   background-color: rgb(250, 232, 245);
@@ -32,11 +37,7 @@ body {
       margin-bottom: 1px;
   
   }
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+
 
 .tarjeta {
   
@@ -47,10 +48,16 @@ body {
     margin: 10px;
     box-sizing: border-box;
     background-color: #FAE8F5(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
-  }
+    flex-direction: column; /* Cambiamos el flujo de los elementos a columna */
+    display: flex; /* Agregamos flexbox para alinear contenido al pie */
+}
   
   #botonAgregar1{
-    bottom: auto;
+    margin: auto; /* Utilizamos "auto" para centrar el botón horizontalmente y 0 para el margen superior */
+  display: block; /* Cambiamos a bloque para que ocupe el ancho completo de su contenedor */
+  width: fit-content; /* Ajustamos el ancho del botón al contenido para evitar que ocupe todo el ancho de la tarjeta */
+  margin-left: auto; /* Centramos el botón horizontalmente */
+  margin-right: auto; /* Centramos el botón horizontalmente */
   }
 
 
@@ -69,29 +76,37 @@ body {
   margin-bottom: 0;
 }
 
-.tarjeta .estrellitas {
+.rating {
+  
+  font-size: 25px;
   display: flex;
-  justify-content:baseline;
-}
-
-.tarjeta .estrellitas input[type="radio"] {
-  display:none;
+  gap: 5px;
+  cursor: pointer;
+  margin-top: auto; /* Empuja el contenido hacia la parte inferior de la tarjeta */
+  
   
 }
 
-.tarjeta .estrellitas label {
-  font-size: 25px;
-  color: #ddd;
-  cursor: pointer;
+.star {
+  color: gray;
 }
 
-.tarjeta .estrellitas label:before {
-  content: '\2605';
+.star:hover,
+.star:hover ~ .star {
+  color: gold;
 }
 
-.tarjeta .estrellitas input[type="radio"]:checked ~ label {
-  color: #ffcc00;
+.rating-text {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  
 }
+
+.product-rating {
+  margin-left: 5px;
+}
+
 
 
 @media (max-width: 768px) {
@@ -107,6 +122,3 @@ body {
     width: 100%;
   }
 }
-
-  
-
