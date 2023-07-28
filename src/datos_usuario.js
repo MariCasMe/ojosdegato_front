@@ -9,7 +9,7 @@
 // Función para obtener los datos del usuario desde la API mediante un método GET
 async function obtenerDatosUsuario() {
   try {
-    const response = await fetch("https://ojosdgato-api.up.railway.app/ojosdgato/users/1");
+    const response = await fetch("https://ojosdgato-api.up.railway.app/ojosdgato/users/12");
     if (!response.ok) {
       throw new Error("Error al obtener los datos del usuario.");
     }
@@ -31,7 +31,7 @@ async function enviarDatosModificados() {
   };
 
   try {
-    const response = await fetch("https://ojosdgato-api.up.railway.app/ojosdgato/users/14", {
+    const response = await fetch("https://ojosdgato-api.up.railway.app/ojosdgato/users/12", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
