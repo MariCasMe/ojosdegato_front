@@ -1,29 +1,33 @@
-const direccionesUsuario={'Alias':'Casa Jaz', 'CP':45960, 'Estado':'Edo. Mex','Municipio':'Naucalpan', 'Contacto':5555555555, 'Predeterminado':true}
+const direccionesUsuario={"id_address": 3,
+"alias": "Casa",
+"postcode": 234567,
+"state": "Edo. Mex",
+"municipality": "Naucalpan de Juárez",
+"city": "Naucalpan",
+"settlement": "Colonia",
+"street": "Calle",
+"exterior_number": "12",
+"interior_number": null,
+"street1": null,
+"street2": null,
+"instruction": null,}
 //
 
 
 function mostrarDirecciones(datos){
   const lista=document.getElementById('lista');
-  let i=0;
-  let atributo='';
-
-  datos.forEach(element => {
-    if(element.Predeterminado){
-      atributo=''
-    }else{atributo='hidden'}
       const direccion=`<li class="list-group-item d-flex justify-content-between align-items-start" id="${i}">
                           <div class="ms-2 me-auto">
-                                <span class="titulos">Alias: ${element.Alias}</span>
+                                <span class="titulos">Alias: ${datos.Alias}</span>
                                 <br>
-                                <span> CP. ${element.CP}</span>
+                                <span> CP. ${datos.CP}</span>
                                 <span> </span>
-                                <span> Entidad: ${element.Estado}</span>
+                                <span> Entidad: ${datos.Estado}</span>
                                 <span> </span>
-                                <span> Municipio/Alcaldía: ${element.Municipio}</span>
+                                <span> Municipio/Alcaldía: ${datos.Municipio}</span>
                                 <span> </span>
-                                <span> Contacto: ${element.Contacto}</span>  
+                                <span> Contacto: ${datos.Contacto}</span>  
                                 <span> </span>
-                                <span ${atributo} id="${element.Alias}"> <mark style="background-color: black; color: white;"> Predeterminado </mark></span>       
                           </div>
                           <div class="dropdown">
                               <button class="btn btn-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -34,10 +38,7 @@ function mostrarDirecciones(datos){
                               </ul>
                             </div>            
                         </li>`
-      lista.innerHTML+=direccion;
-      console.log(`Mostrar id${i}`);
-      i++;
-  });
+      lista.innerHTML+direccion;
 }
 mostrarDirecciones(direccionesUsuario);
 //Boton eliminar de pagina lista_direcciones_usuario.html
