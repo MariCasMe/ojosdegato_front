@@ -1,7 +1,5 @@
 const tarjetasUsuario=[
-  {'Alias':'José Débito', 'Tipo':'Mastercard','Vencimiento':'12/30', 'Predeterminado':true},
-  {'Alias':'José Credito', 'Tipo':'Visa','Vencimiento':'11/30', 'Predeterminado':false },
-  {'Alias':'Pagos Internet', 'Tipo':'Amex','Vencimiento':'12/30', 'Predeterminado':false}
+  {'Alias':'La Poderosa', 'Tipo':'Mastercard','Vencimiento':'03/26', 'Predeterminado':true}
 ]
 const lista=document.getElementById('lista');
 function mostrarTarjetas(datos){
