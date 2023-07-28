@@ -9,7 +9,7 @@
 // Function to populate the form fields with user data from the API
 async function obtenerDatosUsuario() {
   try {
-    const response = await fetch("https://ojosdgato-api.railway.internal/ojosdgato/users/12");
+    const response = await fetch("https://ojosdgato-api.railway.app/ojosdgato/users/12");
     if (!response.ok) {
       throw new Error("Error en la solicitud al servidor: " + response.status + " " + response.statusText);
     }
@@ -56,7 +56,7 @@ async function enviarDatosModificados() {
   };
 
   try {
-    const response = await fetch("https://ojosdgato-api.railway.internal/ojosdgato/users/12", {
+    const response = await fetch("https://ojosdgato-api.railway.app/ojosdgato/users/12", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
