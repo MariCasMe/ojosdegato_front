@@ -52,11 +52,22 @@
                     </div>
                     <br>
                     <!--Contenedor de botón submit-->
-                    <input id="submit-btn" type="submit"  value="Crear cuenta" >
+                    <input id="submit-btn" type="submit"  value="Crear cuenta" data-bs-toggle="modal" data-bs-target="#exampleModal" >
                 </form>
             </div>
         </div>
-
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top: 300px;">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 style="text-align: center; ">Registro exitoso.</h2>
+                    
+                    <!-- <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button> -->
+                </div>
+            </div>
+            </div>
+        </div>
 
         <footer id="footer" class="footer">
             <div id="footerContainer"></div>
