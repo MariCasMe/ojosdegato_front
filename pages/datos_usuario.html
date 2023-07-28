@@ -35,34 +35,28 @@
       <p class="carta-text">Realiza cambios en tus datos si es necesario</p>
 
 
-      <form id="forrmulario"> 
+      <form id="formulario"> 
 
         <div class="mb-3">
           <label for="Usuario" class="form-label">Usuario</label>
-          <input type="text" class="form-control" id="Usuario" placeholder="">
+          <input type="text" class="form-control" id="Usuario" placeholder="" disabled>
         </div>
-
         <div class="mb-3">
           <label for="Telefono" class="form-label">Teléfono</label>
-          <input type="text" class="form-control" id="Telefono" inputmode="numeric" pattern="[0-9]*" placeholder="">
+          <input type="text" class="form-control" id="Telefono" inputmode="numeric" pattern="[0-9]*" placeholder="" disabled>
         </div>
-
-
         <div class="mb-3">
           <label for="Email" class="form-label">E-mail</label>
-          <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+          <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" disabled>
         </div>
-
         <div class="mb-3">
           <label for="Password" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="Password">
+          <input type="password" class="form-control" id="Password" disabled>
         </div>
-
         <button type="submit" id="guardar-btn" class="btn btn-dark" value="submit">Guardar</button>
       </form>
       <br>
-      <button  id="editar-btn" class="btn btn-dark">Habilitar edición</button>
-
+      <button id="editar-btn" class="btn btn-dark">Habilitar edición</button>
     </div>
   </div>
 
