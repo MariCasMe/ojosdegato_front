@@ -1,7 +1,7 @@
 const pedidosUsuario = [
   { 'Orden': '001', 'Monto': '$40', 'Productos': ["Mint Lashes", "Cepilllo de limpieza"], 'Fecha': '28/07/2023', 'Estatus': 'Por confirmar', 'Comentario': '' },
   { 'Orden': '002', 'Monto': '$100', 'Productos': ["LashWash MX", "Lash Shampoo"], 'Fecha': '28/07/2023', 'Estatus': 'Por confirmar', 'Comentario': '' },
-  { 'Orden': '003', 'Monto': '$160', 'Productos': ["LashWash MX", "Lash Shampoo"], 'Fecha': '28/07/2023', 'Estatus': 'Por confirmar', 'Comentario': '' },
+  { 'Orden': '003', 'Monto': '$35', 'Productos': ["LashWash MX", "Lash brush desechable"], 'Fecha': '28/07/2023', 'Estatus': 'Por confirmar', 'Comentario': '' },
   { 'Orden': '004', 'Monto': '$200', 'Productos': ["Mint Lashes", "Removedor en Crema"], 'Fecha': '28/07/2023', 'Estatus': 'Por confirmar', 'Comentario': '' },
   { 'Orden': '005', 'Monto': '$170', 'Productos': ["Nagaraku", "Pluma de Gel Removedor 5 mililitros"], 'Fecha': '28/07/2023', 'Estatus': 'Por confirmar', 'Comentario': '' }
 ]
