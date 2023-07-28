@@ -1,5 +1,5 @@
 const citasUsuario = [
-    { 'id': 1, 'fecha': '23/08/2023', 'horario': '9:00-12:00', 'estatus': 'Pendiente' }
+    { 'id': 1, 'fecha': '23/08/2023', 'horario': '12:00-15:00', 'estatus': 'Pendiente' }
 ]
 
 function mostrarCitas(datos) {

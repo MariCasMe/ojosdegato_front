@@ -1,5 +1,5 @@
 const tarjetasUsuario=[
-    {'Alias':'José Débito', 'Tipo':'Mastercard','Vencimiento':'12/30' },
+    {'Alias':'La Poderosa', 'Tipo':'Mastercard','Vencimiento':'03/26' },
 ]
 const productos=[
     {'producto': 'Lash Shampoo', 'precio': '100', 'cantidad':'1'},
@@ -71,7 +71,7 @@ function eliminar(elemento) {
         });
     }
 const direccionesUsuario=[
-    {'Alias':'Casa Jaz', 'CP':45960, 'Estado':'Edo. Mex','Municipio':'Naucalpan', 'Contacto':5555555555},
+    {'Alias':'Casa', 'CP':234567, 'Estado':'Edo. Mex','Municipio':'Naucalpan', 'Contacto':1111111111},
 ]
 function mostrarDirecciones(datos){
     const lista=document.getElementById('listaEnvío');
