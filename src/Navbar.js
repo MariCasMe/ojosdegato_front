@@ -1,4 +1,4 @@
-fetch('./Pages/navbar3.html')
+fetch('https://ojosdegato.up.railway.app/Pages/navbar3.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbarContainer').innerHTML = data;
