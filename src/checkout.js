@@ -114,7 +114,7 @@ function mostrarResumen(datos){
 //mostrarResumen(productos);
 
 const datosUsuario=[
-    {'Alias':'Casa Jaz', 'CP':45960, 'Estado':'Edo. Mex','Municipio':'Naucalpan', 'Contacto':5555555555},
+    {'Alias':'Casa', 'CP':234567, 'Estado':'Edo. Mex','Municipio':'Naucalpan', 'Contacto':1111111111},
 ]
 
 function mostrarDatosUsuario(datos){
