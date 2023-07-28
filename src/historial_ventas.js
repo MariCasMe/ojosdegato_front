@@ -29,33 +29,33 @@ function insertarDatosTabla(datos) {
 }
 let datos = arregloDatos; // se inicializa con los datos originales
 //Función que lee lo que se introduce en la búsqueda
-function readSearch(){
-    const input = document.querySelector('input[type="text"]');
+// function readSearch(){
+//     const input = document.querySelector('input[type="text"]');
     
-    input.addEventListener("keyup", () => {
-        let value=input.value.toLowerCase();
-        console.log(`The term searched for was ${value}`);
-        datos = filtrarTabla(value,arregloDatos); //se guardan los datos filtrados en datos
-        //Se llama la función de insertar tablar para añadir los datos filtrados
-        console.log(`The filter was ${JSON.stringify(datos)}`);
-        insertarDatosTabla(datos);
-    });   
-}
-function filtrarTabla(value,datos){
-    let datosFiltrados=[];
+//     input.addEventListener("keyup", () => {
+//         let value=input.value.toLowerCase();
+//         console.log(`The term searched for was ${value}`);
+//         datos = filtrarTabla(value,arregloDatos); //se guardan los datos filtrados en datos
+//         //Se llama la función de insertar tablar para añadir los datos filtrados
+//         console.log(`The filter was ${JSON.stringify(datos)}`);
+//         insertarDatosTabla(datos);
+//     });   
+// }
+// function filtrarTabla(value,datos){
+//     let datosFiltrados=[];
 
-    for(let i=0; i<datos.length;i++){
-        valor=value.toLowerCase();
-        let cliente=datos[i].cliente.toLowerCase();
-        if(cliente.includes(valor)){
-            datosFiltrados.push(datos[i]);
-        }
-    }
+//     for(let i=0; i<datos.length;i++){
+//         valor=value.toLowerCase();
+//         let cliente=datos[i].cliente.toLowerCase();
+//         if(cliente.includes(valor)){
+//             datosFiltrados.push(datos[i]);
+//         }
+//     }
     
-    return datosFiltrados;
-}
+//     return datosFiltrados;
+// }
 
-readSearch();
+//readSearch();
 insertarDatosTabla(datos);
 // insertarDatosTabla(dummyData);
 // console.log(dummyData);
