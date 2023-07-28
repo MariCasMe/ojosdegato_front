@@ -1,0 +1,81 @@
+.card{
+   margin: 10%; 
+   background-color: #ffffff63!important;
+}
+.contenido {
+  flex: 1;
+  margin-top: 8rem;
+}
+body{
+  background-image: url('/assets/imgs/Fondos/gradiente_magico2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fija el fondo en su posición */
+  background-position: center;
+  min-height: 100%;
+  display: flexbox;
+  flex-direction: column;
+  }
+.card-preview {
+  margin: auto;
+  max-width: 400px; 
+  background-color: #7857823b;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 20px;
+  position: relative;
+  transform-style: preserve-3d; /* Agregar propiedad para permitir transformaciones 3D */
+  transition: transform 0.5s; /* Agregar transición al efecto de voltear la tarjeta */
+}
+
+.card-preview.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-type {
+  background-image: url('/assets/imgs/logos/visa.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 50px;
+}
+
+.card-number {
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-info {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-name {
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-expiry {
+  font-size: 18px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-cvv {
+  font-size: 18px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transform: rotateY(180deg); /* Inicialmente ocultar el CVV */
+}
+
+

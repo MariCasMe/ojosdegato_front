@@ -1,0 +1,73 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&family=Sanchez:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap" );
+root{
+	--fuente-1: 'League Spartan', sans-serif;
+	--fuente-2: 'Sanchez', serif; 
+  /* 'Sanchez', serif;  */
+} 
+
+body{
+    background-color: #FAE8F5 !important;
+    /* font-family: 'Lustria', serif;   */
+    font-family: var(--fuente-2)!important;
+    background-image: url('/assets/imgs/Fondos/gradiente_magico2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fija el fondo en su posición */
+    background-position: center;
+    min-height: 100%;
+    display: flexbox;
+	flex-direction: column;
+}  
+
+#navbarContainer{
+    margin-bottom: 100px;
+}
+
+.descriptionCard{
+    /* background-color:  rgba(229, 150, 239, 0.30); */
+    /* background-color: rgba(239, 221, 221, 0.211)!important; */
+    background-color: rgba(181, 150, 239, 0.054)!important;
+
+    margin: 15px;
+    border-radius: 15px; 
+    /* font-family: var(--fuente-2); */
+    /* font-family: 'Lustria', serif;   */
+    text-align: justify;    
+    color: black
+    /* color: #FAE8F5; */
+}
+#logo{
+    display: flex;
+    justify-content: center;
+}
+
+#logoimagen{
+    width: 400px;
+    height: auto;
+}
+#imagenesEmpresa{
+    text-align: center;
+    font-family: 'Lustria', serif; 
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fuente-1)
+}
+
+.imgClass{
+    width: 360px;
+    height: auto;
+}
+.border {
+    --bs-border-color: rgba(0, 0, 0, 0.074) !important;
+}
+
+
+.contenido {
+	flex: 1;
+}
