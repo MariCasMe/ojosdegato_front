@@ -1,4 +1,5 @@
 
+
 const ratingContainers = document.querySelectorAll('.rating');
 
 ratingContainers.forEach(container => {
