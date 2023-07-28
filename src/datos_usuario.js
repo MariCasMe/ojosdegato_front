@@ -6,7 +6,7 @@
   Password: "contrasena123",
 };*/
 
-// Función para obtener los datos del usuario desde la API mediante un método GET
+// Function to populate the form fields with user data from the API
 async function obtenerDatosUsuario() {
   try {
     const response = await fetch("https://ojosdgato-api.up.railway.app/ojosdgato/users/12");
@@ -21,7 +21,32 @@ async function obtenerDatosUsuario() {
   }
 }
 
-// Función para enviar los datos modificados del formulario a la API mediante un método PUT
+// Function to display user data in the form fields and enable editing
+function mostrarDatos(data) {
+  document.getElementById("Usuario").value = data.name;
+  document.getElementById("Telefono").value = data.phone;
+  document.getElementById("Email").value = data.email;
+  document.getElementById("Password").value = data.password;
+  habilitarCampos();
+}
+
+// Function to enable the form fields for editing
+function habilitarCampos() {
+  const inputs = document.querySelectorAll("input");
+  inputs.forEach((input) => {
+    input.disabled = false;
+  });
+}
+
+// Function to disable the form fields to prevent editing
+function bloquearCampos() {
+  const inputs = document.querySelectorAll("input");
+  inputs.forEach((input) => {
+    input.disabled = true;
+  });
+}
+
+// Function to send the modified data to the API using a PUT request
 async function enviarDatosModificados() {
   const usuarioModificado = {
     name: document.getElementById("Usuario").value,
@@ -44,68 +69,26 @@ async function enviarDatosModificados() {
     }
 
     window.alert("Los datos se han guardado correctamente.");
-    bloquearCampos(); // Bloquear los campos nuevamente después de guardar
+    bloquearCampos();
   } catch (error) {
     console.error(error);
     window.alert("Error al guardar los datos modificados.");
   }
 }
 
-// Modificar la función mostrarDatos para que reciba los datos del usuario como argumento
-function mostrarDatos(data) {
-  document.getElementById("Usuario").value = data.name;
-  document.getElementById("Telefono").value = data.phone;
-  document.getElementById("Email").value = data.email;
-  document.getElementById("Password").value = data.password;
-  bloquearCampos();
-}
-
-// Función para bloquear los campos del formulario
-function bloquearCampos() {
-  const inputs = document.querySelectorAll("input");
-  inputs.forEach((input) => {
-    input.disabled = true;
-  });
-}
-
-// Función para habilitar los campos del formulario
-function habilitarCampos() {
-  const inputs = document.querySelectorAll("input");
-  inputs.forEach((input) => {
-    input.disabled = false;
-  });
-}
-
-// Llamar a la función obtenerDatosUsuario para obtener los datos del usuario al cargar la página
+// Load user data on page load
 window.onload = obtenerDatosUsuario;
 
-// Agregar event listener al botón "Guardar" para enviar los datos modificados
-document.getElementById("guardar-btn").addEventListener("click", (event) => {
-  event.preventDefault(); // Evitar el envío del formulario por defecto
-  Swal.fire({
-    title: '¿Deseas guardar los cambios?',
-    showDenyButton: true,
-    showCancelButton: false,
-    confirmButtonText: 'Guardar',
-    denyButtonText: 'Cancelar',
-  }).then((result) => {
-    if (result.isConfirmed) {
-      enviarDatosModificados();
-    }
-  });
+// Add event listener to the "Habilitar edición" button
+document.getElementById("editar-btn").addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent the default form submission
+  habilitarCampos();
 });
 
-
-  // Agregar event listener al formulario para realizar la validación antes de guardar los cambios
-  document.getElementById("formulario").addEventListener("submit", (event) => {
-    event.preventDefault(); // Evitar el envío del formulario si los campos no son válidos
-    if (validarDatos()) {
-      //Sección para bd
-      bloquearCampos();
-      // Recargar la página después de guardar los cambios y mostrar la alerta
-      setTimeout(() => {
-        window.location.reload();
-        Swal.fire('¡Guardado!', '', 'success');
-      }, 1000);
-    }
-  });
+// Add event listener to the form for data validation and saving changes
+document.getElementById("formulario").addEventListener("submit", (event) => {
+  event.preventDefault(); // Prevent the default form submission
+  if (validarDatos()) {
+    enviarDatosModificados();
+  }
+});
