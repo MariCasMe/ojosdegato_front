@@ -9,7 +9,7 @@
 // Function to populate the form fields with user data from the API
 async function obtenerDatosUsuario() {
   try {
-    const response = await fetch("https://ojosdgato-api.up.railway.app/ojosdgato/users/12");
+    const response = await fetch("https://ojosdgato-api.up.railway.app/ojosdgato/users/12", { mode: 'no-cors'});
     if (!response.ok) {
       throw new Error("Error al obtener los datos del usuario.");
     }
@@ -56,10 +56,10 @@ async function enviarDatosModificados() {
   };
 
   try {
-    const response = await fetch("https://ojosdgato-api.up.railway.app/ojosdgato/users/12", {
+    const response = await fetch("https://ojosdgato-api.up.railway.app/ojosdgato/users/12", { mode: 'no-cors'}, {
       method: "PUT",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(usuarioModificado),
     });
