@@ -6,7 +6,7 @@ const apellidoInput=document.getElementById('apellidos');
 const telInput=document.getElementById('telefono');
 const usuarioInput=document.getElementById('usuario');
 const contasenaInput=document.getElementById('contraseña');
-const submitBtn=document.getElementById('submit-btn');
+const submitBtn=document.getElementById('btn');
 
 //Expresiones regulares para validar los inputs
 const emailREGEX=new RegExp (/^([\w\.\_])*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{3,})$/);//validar email
@@ -16,11 +16,10 @@ const telREGEX=new RegExp (/\d{10}/);//Validación de teléfono
 
 
 //Función que se invoca al hacer click al botón crear cuenta
-formulario.addEventListener('submit',(evento)=>{
+function agregarUsuario (){
    //Validación de los inputs
     if(!nombreREGEX.test(nombreInput.value)||!nombreREGEX.test(apellidoInput.value)||!emailREGEX.test(emailInput.value)||!telREGEX.test(telInput.value)||!usuarioREGEX.test(usuarioInput.value)||!(contasenaInput.value.length>=6)){
         //si hay al menos un input que no pase la validación se muestra una alerta que pide revisar los inputs
-        evento.preventDefault();
         window.alert("Formato de entrada incorrecto, revise los campos proporcionados"); 
     } else{
         //si todos pasan la validación se llama a la función agregar usuario
@@ -56,4 +55,4 @@ formulario.addEventListener('submit',(evento)=>{
           })
 
     }
-})
+}
