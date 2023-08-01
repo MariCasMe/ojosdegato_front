@@ -53,6 +53,8 @@ function agregarUsuario (){
               Swal.fire('Registrado');
             }
           })
-
     }
+    formulario.reset();
+    
+    
 }
