@@ -1,66 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap");
 
-
-/*Productos */
+/* Configuración de fondo y fuentes de la página */
 body {
-
- /* background-image: url("/assets/imgs/Fondos/gradiente_magico2.png");*/
- background-color: white;
-  /*background-repeat: no-repeat;
-  background-size: cover;
-   background-attachment: fixed; Fija el fondo en su posición 
-  background-position: center; */
+  background-color: white;
 }
+
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+/* Estilos para el encabezado */
 #encabezado {
   background-color: rgb(250, 232, 245);
   background-image: url(/assets/imgs/Fondos/gradiente_magico2.png);
-  background-size:cover;
+  background-size: cover;
   background-position: center;
-  background-repeat:space;
+  background-repeat: space;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
- 
-    
-  }
-  #Titulo1 {
-    
-    font-family:  'League Spartan', sans-serif;
-  }
-  #titulo2 {
-    font-family: 'Sanchez', serif; 
-      margin-top: 1px;
-      margin-bottom: 1px;
-  
-  }
-
-
-.tarjeta {
-  
-    width: calc(33.33% - 20px);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    box-sizing: border-box;
-    background-color: #FAE8F5(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
-    flex-direction: column; /* Cambiamos el flujo de los elementos a columna */
-    display: flex; /* Agregamos flexbox para alinear contenido al pie */
 }
-  
-  #botonAgregar1{
-    margin: auto; /* Utilizamos "auto" para centrar el botón horizontalmente y 0 para el margen superior */
+
+/* Estilos para el título principal */
+#Titulo1 {
+  font-family: "League Spartan", sans-serif;
+}
+
+/* Estilos para los títulos secundarios */
+#titulo2 {
+  font-family: "Sanchez", serif;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+/* Estilos para las tarjetas de productos */
+.tarjeta {
+  width: calc(33.33% - 20px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: #FAE8F5(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fondo blanco con transparencia */
+  flex-direction: column; /* Cambiamos el flujo de los elementos a columna */
+  display: flex; /* Agregamos flexbox para alinear contenido al pie */
+}
+
+#botonAgregar1 {
+  margin: auto; /* Utilizamos "auto" para centrar el botón horizontalmente y 0 para el margen superior */
   display: block; /* Cambiamos a bloque para que ocupe el ancho completo de su contenedor */
   width: fit-content; /* Ajustamos el ancho del botón al contenido para evitar que ocupe todo el ancho de la tarjeta */
   margin-left: auto; /* Centramos el botón horizontalmente */
   margin-right: auto; /* Centramos el botón horizontalmente */
-  }
+}
 
-
+/* Estilos para las imágenes de los productos en las tarjetas */
 .tarjeta img {
   width: 100%;
   height: auto;
@@ -68,23 +67,23 @@ body {
   margin-bottom: 10px;
 }
 
+/* Estilos para el título de los productos en las tarjetas */
 .tarjeta h3 {
   margin-top: 0;
 }
 
+/* Estilos para los párrafos de descripción de los productos en las tarjetas */
 .tarjeta p {
   margin-bottom: 0;
 }
 
+/* Estilos para el sistema de calificación de estrellas */
 .rating {
-  
   font-size: 25px;
   display: flex;
   gap: 5px;
   cursor: pointer;
   margin-top: auto; /* Empuja el contenido hacia la parte inferior de la tarjeta */
-  
-  
 }
 
 .star {
@@ -96,18 +95,16 @@ body {
   color: gold;
 }
 
+/* Estilos para el texto que muestra la calificación del producto */
 .rating-text {
   font-size: 16px;
   display: flex;
   align-items: center;
-  
 }
 
 .product-rating {
   margin-left: 5px;
 }
-
-
 
 @media (max-width: 768px) {
   /* Ajustar tamaño de tarjetas para dispositivos móviles */
@@ -121,10 +118,4 @@ body {
   .tarjeta {
     width: 100%;
   }
-<<<<<<< HEAD
 }
-
-
-=======
-}
->>>>>>> b76c2e0db89874daeed23453228b180b4ec042e0
