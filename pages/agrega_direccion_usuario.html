@@ -19,29 +19,23 @@
 <!--=======================FIN NAVBAR=======================-->
 
 
-
-  <!--=======================INICIO FORMULARIO=======================-->
-
-
-
   <div class="card">
     <div class="card-body">
       <p class="card-title text-center" id="titulo" >Agrega una nueva dirección de envío</p>
-      <!-- <p class="card-text">Agrega.</p> -->
-
-
+    <!--Inicio de formulario de dirección-->
       <form action="/cuenta_usuario.html">
 
         <div class="mb-3">
+        <!--Alias de dirección-->
           <label for="alias" class="form-label">Alias de dirección</label>
           <input type="text" class="form-control" id="alias" placeholder="">
         </div>
-
+        <!--Código postal-->
         <div class="mb-3">
           <label for="cp" class="form-label">Código Postal</label>
           <input type="number" min="0" minlength="5" maxlength="5" class="form-control" id="cp" placeholder="">
         </div>
-
+        <!--Selector de estado-->
         <div class="mb-3">
           <label for="estado" class="form-label">Estado</label>
           <select id="estado" class="form-control">
@@ -79,47 +73,47 @@
             <option value="31">Zacatecas</option>
           </select>
         </div>
-
+        <!--Municipio-->
         <div class="mb-3">
           <label for="municipio" class="form-label">Municipio</label>
           <input type="text" class="form-control" id="municipio" placeholder="">
         </div>
-
+        <!--Colonia-->
         <div class="mb-3">
           <label for="colonia" class="form-label">Colonia</label>
           <input type="text" class="form-control" id="colonia" placeholder="">
         </div>
-
+        <!--Calle-->
         <div class="mb-3">
           <label for="calle" class="form-label">Calle</label>
           <input type="text" class="form-control" id="calle" placeholder="">
         </div>
-
+        <!--Numero interior-->
         <div class="mb-3">
           <label for="numeroInt" class="form-label">Número interior</label>
           <input type="text" style="text-transform:uppercase" min="0" class="form-control" id="numeroInt" onkeypress="mayus(this);" placeholder="S/N">
         </div>
-
+        <!--Numero exterior-->
         <div class="mb-3">
           <label for="numeroExt" class="form-label">Número exterior</label>
           <input type="text" style="text-transform:uppercase" min="0" class="form-control" id="numeroExt" placeholder="S/N">
         </div>
-
+        <!--Numero calle 1-->
         <div class="mb-3">
           <label for="calle1" class="form-label">Calle 1</label>
           <input type="text" class="form-control" id="calle1" placeholder="">
         </div>
-
+        <!--Numero calle 2-->
         <div class="mb-3">
           <label for="calle2" class="form-label">Calle 2</label>
           <input type="text" class="form-control" id="calle2" placeholder="">
         </div>
-
+        <!--Teléfono-->
         <div class="mb-3">
           <label for="telContacto" class="form-label">Teléfono de contacto</label>
           <input type="tel" maxlength="10" class="form-control" id="telContacto" placeholder="">
         </div>
-
+        <!--Indicaciones adicionales-->
         <div class="form-group col-md-12">
           <label for="indicaciones" class="form-label">Indicaciones adicionales</label>
           <input type="text" class="form-control" id="indicaciones" placeholder="">
@@ -127,23 +121,13 @@
         
       </form>
       <br>
+      <!--Botón para guardar información-->
       <button id="guardar-btn" type="button" class="btn btn-dark">Guardar</button>
 
-      <button type="submit" class="btn btn-danger">Cancelar</button>
+      <button class="btn btn-danger"> <a href="/pages/cuenta_usuario.html"></a> Cancelar</button>
 
     </div>
   </div>
-
- 
-  <!--=======================FIN FORMULARIO=======================-->
-
-
-
-
-
-
-
-
 
   <!--=======================INICIO FOOTER=======================-->
 
@@ -151,13 +135,6 @@
     <div id="footerContainer"></div>   
 </footer>
   <!--=======================FIN FOOTER=======================-->
-<script>
-  function mayus(e) {
-  var tecla=e.value;
-  var tecla2=tecla.toUpperCase();
-  }
-</script>
-
 
   <script src="../src/Navbar.js"></script>
   <script src="../src/Footer.js"></script>
