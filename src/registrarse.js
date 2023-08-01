@@ -19,9 +19,9 @@ const telREGEX=new RegExp (/\d{10}/);
 
 
 formulario.addEventListener('submit',(evento)=>{
-    evento.preventDefault();
+   
     if(!nombreREGEX.test(nombreInput.value)||!nombreREGEX.test(apellidoInput.value)||!emailREGEX.test(emailInput.value)||!telREGEX.test(telInput.value)||!usuarioREGEX.test(usuarioInput.value)||!(contasenaInput.value.length>=6)){
-       
+        evento.preventDefault();
         window.alert("Formato de entrada incorrecto, revise los campos proporcionados"); 
     } else{
         agregarUsuario();
