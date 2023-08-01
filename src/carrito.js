@@ -1,4 +1,3 @@
-/// Parte con JSON
 function fetchdata(){
     fetch("productos.json") // se hace fetch de la api
     .then(response=>response.json()) // se reseuelve la promesa
@@ -62,10 +61,6 @@ const agregar = (productId) => {
     addItemToCart(productId);
     insertarDatosTabla(arregloDatos);
 }
-    
-
-/////////////////////////////////////////
-
 
 //Se crea la función para agregar productos al carrito 
 function addItemToCart(productId){
@@ -84,7 +79,6 @@ function addItemToCart(productId){
     console.log(orderFinalPrice.orderPrice);
     localStorage.setItem("orderFinalPrice",  JSON.stringify(orderFinalPrice.orderPrice));
 }
-
 
 //Se crea una función que actualiza la cantidad
 function updatePrice(productId, quantity){

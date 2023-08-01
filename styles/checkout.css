@@ -8,7 +8,6 @@ root{
 
  /*color del fondo general */
 body{
-    /* background-color: #FAE8F5 !important; */
     font-family: var(--fuente-2)!important;
     background-image: url('/assets/imgs/Fondos/gradiente_magico2.png');
     background-size: cover;
