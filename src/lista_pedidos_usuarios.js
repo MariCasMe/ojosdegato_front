@@ -7,15 +7,20 @@ const pedidosUsuario = [
 ]
 
 
-
+//Función para mostrar pedidos
 function mostrarPedidosUsuario(datos) {
   let i = 0;
+  //declarando variable listado que representa el elemento <ol> en el documento html
   const listado = document.getElementById('lista');
   datos.forEach(elemento => {
+    //Variable reseña, para guardar comentarios
     let reseña;
+    //Variable atributo, que define si el modal para comentar es solo para lectura
     let atributo;
+    // Si el estatus de la orden no es "entregado" el atributo del modal es "solo lectura" y el comentario mostrado es "Deja tu comentario en cuanto llegue tu pedido "
     if (elemento.Estatus == 'Entregado') { reseña = elemento.Comentario; atributo = ''; }
     else { reseña = 'Deja tu comentario en cuanto llegue tu pedido'; atributo = 'readonly'; }
+    // Variable sección, que guarda los elementos necesarios para mostrar la información de cada orden
     let seccion = `<li class="list-group-item d-flex justify-content-between align-items-start">
                           <div class="ms-2 me-auto">
                               <div class="titulos">No. Orden: ${elemento.Orden}</div>
@@ -51,14 +56,18 @@ function mostrarPedidosUsuario(datos) {
                         </div>
                           </div>
                       </li>`
+    // se agrega sección al elemento listado
     listado.innerHTML += seccion;
     i++;
   });
 }
+// Invocación de la función mostrar pedidos usuario
 mostrarPedidosUsuario(pedidosUsuario);
 
-
+//Función que actualiza el comentario
 function actualizar(identificador) {
+  //La variable areaComentario que representa el textarea del modal para comentar de una sección específica
   const areaComentario = document.getElementById(`${identificador}`);
+  //El atributo del objeto orden se actualiza con el valor del textarea 
   pedidosUsuario[identificador].Comentario = areaComentario.value;
 }

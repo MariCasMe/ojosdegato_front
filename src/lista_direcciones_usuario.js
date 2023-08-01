@@ -18,15 +18,15 @@ function mostrarDirecciones(datos){
   const lista=document.getElementById('lista');
       const direccion=`<li class="list-group-item d-flex justify-content-between align-items-start" id="${i}">
                           <div class="ms-2 me-auto">
-                                <span class="titulos">Alias: ${datos.Alias}</span>
+                                <span class="titulos">Alias: ${datos.alias}</span>
                                 <br>
-                                <span> CP. ${datos.CP}</span>
+                                <span> CP. ${datos.postcode}</span>
                                 <span> </span>
-                                <span> Entidad: ${datos.Estado}</span>
+                                <span> Entidad: ${datos.state}</span>
                                 <span> </span>
-                                <span> Municipio/Alcaldía: ${datos.Municipio}</span>
+                                <span> Municipio/Alcaldía: ${datos.municipality}</span>
                                 <span> </span>
-                                <span> Contacto: ${datos.Contacto}</span>  
+                                <span> Colonia: ${datos.settlement}</span>  
                                 <span> </span>
                           </div>
                           <div class="dropdown">
@@ -38,7 +38,7 @@ function mostrarDirecciones(datos){
                               </ul>
                             </div>            
                         </li>`
-      lista.innerHTML+direccion;
+      lista.appendChild(direccion);
 }
 mostrarDirecciones(direccionesUsuario);
 //Boton eliminar de pagina lista_direcciones_usuario.html
