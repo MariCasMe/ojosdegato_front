@@ -1,3 +1,4 @@
+//Se define un objeto direccionesUsuario que contiene información sobre las direcciones del usuario.
 const direccionesUsuario={"id_address": 3,
 "alias": "Casa",
 "postcode": 234567,
@@ -11,10 +12,9 @@ const direccionesUsuario={"id_address": 3,
 "street1": null,
 "street2": null,
 "instruction": null,}
-//
 
-
-function mostrarDirecciones(datos){
+//Generar el HTML para mostrar la dirección en una lista.
+function mostrarDirecciones(datos){ 
   const lista=document.getElementById('lista');
       const direccion=`<li class="list-group-item d-flex justify-content-between align-items-start" id="${i}">
                           <div class="ms-2 me-auto">
@@ -44,6 +44,7 @@ mostrarDirecciones(direccionesUsuario);
 //Boton eliminar de pagina lista_direcciones_usuario.html
 function eliminar(elemento) {
   
+    // mostrar ventanas emergentes (modales) 
     Swal.fire({
       title: '¿Estás seguro/a?',
       text: "No podrás deshacer esta acción",
@@ -53,10 +54,10 @@ function eliminar(elemento) {
       cancelButtonColor: '#d33',
       cancelButtonText: 'Cancelar',
       confirmButtonText: 'Sí, borrar.'
-    }).then((result) => {
+    }).then((result) => { //manejar el resultado exitoso de la operación asincrónica.
       if (result.isConfirmed) {
         let i=0;
-        direccionesUsuario.forEach(d=>{
+        direccionesUsuario.forEach(d=>{ // Para cada dirección, se obtiene el elemento del DOM con el id correspondiente y se elimina del DOM utilizando el método remove()
           let datosDireccion=document.getElementById(`${i}`);
           datosDireccion.remove();
           console.log(`Eliminado el  id${i}`);
@@ -64,11 +65,9 @@ function eliminar(elemento) {
         });
         if(direccionesUsuario[elemento].Predeterminado){
           direccionesUsuario[elemento].Predeterminado=false;
-
           direccionesUsuario.splice(elemento,1);
           if(elemento==direccionesUsuario.length){direccionesUsuario[0].Predeterminado=true;}
           else{direccionesUsuario[elemento].Predeterminado=true;}
-         
           console.log(direccionesUsuario);
         }else{direccionesUsuario.splice(elemento,1);}
         

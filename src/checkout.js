@@ -1,16 +1,12 @@
 const tarjetasUsuario=[
-    {'Alias':'La Poderosa', 'Tipo':'Mastercard','Vencimiento':'03/26' },
+    {'Alias':'José Débito', 'Tipo':'Mastercard','Vencimiento':'12/30' },
 ]
 const productos=[
     {'producto': 'Lash Shampoo', 'precio': '100', 'cantidad':'1'},
 ]
-// {'producto': 'Pluma de gel removedor', 'precio': '170', 'cantidad':'1'},
-// {'producto': 'Lash brush desechable', 'precio': '35', 'cantidad':'1'}, 
-//Se crean variables para guardar los datos de los productos y los del carrito
 let produ = JSON.parse(localStorage.getItem("products"));
 let car = JSON.parse(localStorage.getItem("cart"));
 let totalPrice=JSON.parse(localStorage.getItem("orderFinalPrice"));
-
 
 console.log(produ);    
 console.log(car);
@@ -71,7 +67,7 @@ function eliminar(elemento) {
         });
     }
 const direccionesUsuario=[
-    {'Alias':'Casa', 'CP':234567, 'Estado':'Edo. Mex','Municipio':'Naucalpan', 'Contacto':1111111111},
+    {'Alias':'Casa Jaz', 'CP':45960, 'Estado':'Edo. Mex','Municipio':'Naucalpan', 'Contacto':5555555555},
 ]
 function mostrarDirecciones(datos){
     const lista=document.getElementById('listaEnvío');
@@ -111,11 +107,10 @@ function mostrarResumen(datos){
     });
 }
 
-//mostrarResumen(productos);
-
 const datosUsuario=[
     {'Alias':'Casa', 'CP':234567, 'Estado':'Edo. Mex','Municipio':'Naucalpan', 'Contacto':1111111111},
 ]
+
 
 function mostrarDatosUsuario(datos){
     const lista=document.getElementById('listaDatosCliente');
