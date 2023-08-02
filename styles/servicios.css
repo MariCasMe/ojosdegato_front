@@ -31,10 +31,12 @@ body {
 /* Estilos para las tarjetas de servicios */
 #servicios-card {
   background: white;
-  border: 5px solid #fae8f5;
-  height: 200px; /* Altura fija para la imagen */
+  border: 5px solid #FAE8F5;
+  height: 100px; /* Altura fija para la imagen */
   object-fit: cover; /* Ajustar la imagen sin perder la proporción */
-  height: 300px; /* Establece una altura mínima para las tarjetas */
+  height: 350px; /* Establece una altura mínima para las tarjetas */
+  text-align: center;
+  position: relative; /* Establecemos el posicionamiento relativo */
 }
 
 /* Estilos para los botones */
